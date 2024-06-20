@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Poppins:wght@100;300;500&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik&family=Secular+One&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="src/css/style.css">
+
+    <link rel="shortcut icon" href="src/images/favicon-animalstocare.png" type="image/x-icon">
+
+    <title>AnimalsToCare - Adoção de Animais</title>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#projects">Comunidade</a></li>
+                <li><a href="#adopt">Adote</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+        <h1>AnimalsToCare 🐾</h1>
+    </header>
+
+    <section id="home">
+        <h2 class="titulo">Bem-vindo ao AnimalsToCare</h2>
+        <p class="subtitulo">Encontre seu novo melhor amigo hoje mesmo!</p>
+    </section>
+
+    <section id="about">
+        <h2>Sobre Nós 🤍</h2>
+        <p>Nós somos uma organização dedicada a encontrar lares amorosos para animais abandonados, focando em gatos e
+            cachorros que precisam de uma segunda chance. No AnimalsToCare, resgatamos animais em risco, fornecendo
+            cuidados médicos, alimentação e um ambiente seguro até que estejam prontos para adoção. Trabalhamos com
+            veterinários e voluntários para garantir a saúde e bem-estar de cada animal. Você pode usar nosso site para adotar um pet ou registrá-los para adoção, seja como pessoa física ou jurídica. Nosso objetivo é facilitar o processo de encontrar um lar amoroso para cada animal e proporcionar a todos a oportunidade de contribuir para essa causa.</p>
+
+        <p>Acreditamos na adoção responsável como chave para reduzir o número de animais de rua. Oferecemos suporte
+            contínuo aos novos adotantes, incluindo orientação sobre cuidados básicos e treinamento comportamental,
+            garantindo uma transição tranquila para o novo lar. Organizamos eventos de adoção e campanhas de
+            conscientização sobre posse responsável, castração e vacinação.</p>
+
+        <p>Temos programas especiais para animais idosos e com necessidades especiais, acreditando que todos merecem uma
+            chance de serem amados, independentemente da idade ou condição. Se você busca um novo melhor amigo,
+            considere a adoção. Nossos gatos e cachorros esperam por uma família amorosa. A adoção transforma a vida dos
+            animais e dos adotantes.</p>
+
+        <Espero>Junte-se a nós na missão de transformar vidas. Com seu apoio, podemos continuar fazendo a diferença.
+            Obrigado
+            por apoiar o <b>AnimalsToCare</b> e nossa causa.
+            Espero que isso atenda às suas necessidades! Se precisar de mais alguma coisa, é só avisar! 🧡</p>
+    </section>
+
+    <section class="fotos" id="projects">
+        <h2 class="titulo">Comunidade</h2>
+        <div class="container-fotos">
+            <div class="foto">
+                <a href="">
+                    <img src="./src/images/comunidade-1.jpg" alt="foto 1">
+                </a>
+            </div>
+
+            <div class="foto">
+                <a href="">
+                    <img src="./src/images/comunidade-2.jpeg" alt="foto 2">
+                </a>
+            </div>
+
+            <div class="foto">
+                <a href="">
+                    <img src="./src/images/comunidade-3.jpg" alt="foto 3">
+                </a>
+            </div>
+
+            <div class="foto">
+                <a href="">
+                    <img src="./src/images/comunidade-4.webp" alt="foto 4">
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="adopt">
+        <h2>Adote um Amigo</h2>
+        <div class="animal-grid">
+            <div class="animal-card">
+                <img src="src/images/animalstocare-gato.avif.jpg" alt="Gato">
+                <h3>Gato</h3>
+                <p>Adote um gato carinhoso e brincalhão.</p>
+                <button onclick="showAdoptForm('Gato')">Adote</button>
+            </div>
+            <div class="animal-card">
+                <img src="src/images/animalstocare-cachorro.avif.jpg" alt="Cachorro">
+                <h3>Cachorro</h3>
+                <p>Adote um cachorro leal e companheiro.</p>
+                <button onclick="showAdoptForm('Cachorro')">Adote</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contato</h2>
+        <p>Entre em contato conosco para mais informações sobre adoção.</p>
+        <form id="contactForm">
+            <input type="text" id="name" name="name" placeholder="Nome" required>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <textarea id="message" name="message" placeholder="Mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <div id="adoptModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeAdoptForm()">&times;</span>
+            <h2>Formulário de Adoção</h2>
+            <form id="adoptForm">
+                <input type="hidden" id="animalType" name="animalType">
+                <input type="text" id="adopterName" name="adopterName" placeholder="Seu Nome" required>
+                <input type="email" id="adopterEmail" name="adopterEmail" placeholder="Seu Email" required>
+                <textarea id="adopterMessage" name="adopterMessage" placeholder="Por que você quer adotar?"
+                    required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="src/js/index.js"></script>
+</body>
+
+</html>
